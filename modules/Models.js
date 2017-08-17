@@ -5,7 +5,7 @@ var schemas = {
         errorMessage: { type: String, required: true },
         error: { type: String, default: '' },
         timestamp: { type: Date, default: Date.now },
-        user_id: { type: String, required: true },
+        user_id: { type: String}, // or however you'd want it
         platform: { type: String, required: true },
         extraInformation: { type: String, default: '' },
     }),

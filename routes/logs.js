@@ -7,7 +7,7 @@ var express = require('express'),
     Client = require('node-rest-client').Client,
     restClient = new Client(),
     router = express.Router(),
-    functions = require('../modules/functions'),
+    functions = require('../modules/functions');
 
 function saveLocalException(exception) {
     var data = new LocalException({
@@ -52,9 +52,8 @@ router.post('/logs', jsonParser,(req, res) => {
     if (req.body.errorMessage && req.body.error && req.body.platform) {
         var data = {
             errorMessage: req.body.errorMessage,
-            error: req.body.error,
-            user_id: req.app.get(req.app.get('user_type') + "_id"),
-            platform: req.body.platform,
+            error: (typeof req.body.error=="string") ? req.body.error : JSON.parse(req.body.error), // this could be the actual error stack to give more context to the debugging developer.
+            platform: req.body.platform // where the app is coming from eg iOS or Android or Web App
         }
         if (req.body.extraInformation) {
             data.extraInformation = req.body.extraInformation
