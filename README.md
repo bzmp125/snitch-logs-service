@@ -7,7 +7,8 @@ The idea is to help developers get started faster with new projects, allowing th
 The service can be deployed on any server, and to get started, you can follow these simple steps. A Heroku Procfile has been added to help you deploy to Heroku. You can head over to [Heroku Dev Center](https://devcenter.heroku.com/articles/heroku-cli) to learn more about installing the Heroku Toolbelt.
 
 ```
-git clone https://github.com/bzmp125/logs-service
+git clone https://github.com/bzmp125/snitch-logs-service
+cd snitch-logs-service
 npm install
 npm start
 ```
