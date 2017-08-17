@@ -20,7 +20,7 @@ var db = mongoose.connection;
 
 db.on('error', () => {
     console.error.bind(console, 'Connection Error : ');
-    exit(0)
+    process.exit(0)
 });
 db.once('open', function () {
     console.log('DB Connection ok!');
