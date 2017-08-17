@@ -1,4 +1,4 @@
-# logs-service
+# snitch-logs-service
 A reusable logs service for a Microservices Architecture.
 
 The idea is to help developers get started faster with new projects, allowing them to focus on building their applications, which is what really matters. We all know every project will at some point need to capture and save logs somewhere to create a bug database which the developers can use to either fix bugs on their applications or refer to when they experience new bugs. This service comes with a simple HTTP REST API to allow you the developer to add any form of client on top of this service so that you are able to see which bugs/errors are present in your applications.
