@@ -26,8 +26,8 @@ As stated in the official Heroku Documentation, you can get started 'quickly' on
 
 ```
 heroku apps:create test-logs-service
-heroku git:remote -a test-logs-service
 git init
+heroku git:remote -a test-logs-service
 ```
 You can replace 'test-logs-service' with the name of the service you wanted.
 
