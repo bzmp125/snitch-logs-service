@@ -15,7 +15,7 @@ var corsOptions = {
 app.use(cors(corsOptions));
 
 var mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI,{ userMongoClient:true });
+mongoose.connect(process.env.MONGODB_URI,{ useMongoClient:true });
 var db = mongoose.connection;
 
 db.on('error', () => {
